@@ -1,0 +1,1331 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #1e1e1e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px;
+    width: 100%;
+}
+
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0px;
+    background-color: rgba(30, 30, 30, 0.5);
+    z-index: 10;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header img {
+    height: 30px;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.header nav {
+    display: flex;
+    gap: 50px;
+    margin-right: 50px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: titilium;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 8px;
+    margin-right: 30px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    color: #ffffff;
+    margin: 0;
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero h1, .hero h2, .hero h3 {
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 85%;
+    left: 8%;
+}
+
+.hero h1 {
+    top: 63%;
+    padding: 20px;
+    font-size: 32px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+}
+
+.hero h2 {
+    top: 68%;
+    padding: 20px;
+    font-size: 56px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+}
+
+.hero h3 {
+    top: 85%;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+}
+
+.highlight-section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.highlight-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: orbitron;
+    font-weight: 600;
+}
+
+.highlight-section h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: titilium;
+    font-weight: 400;
+}
+
+.highlight-section p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 1079px;
+    margin: 0 auto;
+    font-family: titilium;
+    font-weight: 400;
+}
+
+.agenda {
+    background-color: #403FFF;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.agenda h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+    margin-left: 65px;
+    font-family: orbitron;
+    margin-top: 35px;
+}
+
+.agenda h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0;
+    text-align: left;
+    margin-left: 65px;
+    margin-top: 10px;
+    font-family: titilium;
+}
+
+.agenda-days {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 65px;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+}
+.agenda-days2 {
+    display: none;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.agenda-days button {
+    background-color: #403FFF;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+.agenda-days2 button {
+    background-color: #403FFF;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+
+.agenda-days button:hover {
+    background-color: #ffffff;
+    color: #403FFF;
+    font-family: titilium;
+}
+
+.agenda-days2 button:hover {
+    background-color: #ffffff;
+    color: #403FFF;
+    font-family: titilium;
+}
+
+.agenda-days .selected {
+    background-color: #ffffff;
+    color: #403FFF;
+}
+
+.agenda-days2 .selected {
+    background-color: #ffffff;
+    color: #403FFF;
+}
+
+.agenda-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #403FFF;
+    width: 70%;
+    padding: 20px;
+    color: white;
+    position: relative;
+    border: 2px solid #403FFF;
+    aspect-ratio: 1 / 0.9;
+    margin-left: 40px;
+    border-color: #ffffff;
+    border-radius: 30px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: orbitron;
+    text-align: left;
+    margin: 10px;
+    font-weight: 500;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: left;
+    width: 85%;
+    margin: 10px;
+    line-height: 1.3;
+    font-family: titilium;
+}
+
+.card p {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+    margin: 10px;
+    font-family: titilium;
+}
+
+.footercard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-left: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #2A1CB2;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    font-family: titilium;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    border-radius: 30px 0px 30px 0px;
+}
+
+.card .icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.card .icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.hackathon {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.hackathon img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hackathon .p1, .hackathon .p2, .hackathon .p3 {
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hackathon .p1 {
+    top: 40%;
+    padding: 10px;
+    font-size: 24px;
+    font-family: titilium;
+    font-weight: 400;
+    line-height: 36.5px;
+}
+
+.hackathon .p2 {
+    top: 38%;
+    padding: 10px;
+    font-size: 64px;
+    font-family: orbitron;
+    font-weight: 600;
+}
+
+.hackathon .p3 {
+    top: 55%;
+    padding: 10px;
+    font-size: 42px;
+    font-family: orbitron;
+    font-weight: 600;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 80px;
+    padding-left: 150px;
+
+}
+
+.footer img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.footer p1 {
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-family: titiliumit;
+    font-weight: 600;
+}
+
+.footer p2 {
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: titilium;
+}
+
+.footer p3 {
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: titilium;
+}
+
+.footer p4 {
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: titilium;
+}
+
+.cp2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    margin-top: 90px;
+}
+
+.cp2 img {
+    height: 12px;
+}
+
+.cp2 p1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-family: titilium;
+}
+
+@font-face {
+    font-family: orbitron;
+    src: url(fontes/Orbitron-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: titilium;
+    src: url(fontes/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: titiliumit;
+    src: url(fontes/TitilliumWeb-Italic.ttf);
+}
+
+@media (max-width: 1280px) and (min-width: 1025px){
+    .agenda-cards {
+        width: 100%;
+        gap: 15px;
+    }
+    .card{
+        aspect-ratio: 1 / 1;
+    }
+    .hackathon .p3 {
+        top: 60%;
+        padding: 10px;
+        font-size: 42px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+
+ }
+@media (max-width: 1024px) and (min-width: 961px){
+    .hero .p1 {
+        top: 56%;
+        padding: 22px;
+        font-size: 32px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+
+    .hero .p2 {
+        top: 60%;
+        padding: 22px;
+        font-size: 56px;
+        font-family: 'Orbitron';
+        font-weight: 600;
+    }
+
+    .hero .p3 {
+        top: 86%;
+        padding: 22px;
+        font-size: 20px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+    .agenda-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .card {
+        width: 90%;
+        margin-left: 0;
+        
+    }
+    .hackathon .p1 {
+        top: 20%;
+        padding: 10px;
+        font-size: 24px;
+        font-family: titilium;
+        font-weight: 400;
+        line-height: 36.5px;
+    }
+    
+    .hackathon .p2 {
+        top: 25%;
+        padding: 10px;
+        font-size: 64px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+    
+    .hackathon .p3 {
+        top: 55%;
+        padding: 10px;
+        font-size: 42px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+    .footer {
+        padding-left: 90px;
+    }
+
+}
+
+@media (max-width: 960px) and (min-width: 831px) {
+    .header nav {
+        gap: 30px;
+    }
+
+    .hero .p1 {
+        top: 56%;
+        padding: 22px;
+        font-size: 32px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+
+    .hero .p2 {
+        top: 60%;
+        padding: 22px;
+        font-size: 56px;
+        font-family: 'Orbitron';
+        font-weight: 600;
+    }
+
+    .hero .p3 {
+        top: 90%;
+        padding: 22px;
+        font-size: 20px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+
+    .highlight-section {
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    .highlight-section p {
+        max-width: 760px;
+    }
+
+    .agenda h1 {
+        font-size: 40px;
+    }
+
+    .agenda h2 {
+        font-size: 20px;
+    }
+
+    .agenda-days {
+        gap: 10px;
+    }
+
+    .agenda-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .hackathon .p1 {
+        top: 22%;
+        padding: 10px;
+        font-size: 24px;
+        font-family: titilium;
+        font-weight: 400;
+        line-height: 36.5px;
+    }
+
+    .hackathon .p2 {
+        top: 20%;
+        padding: 10px;
+        font-size: 64px;
+        font-family: orbitron;
+        font-weight: 600;
+
+    }
+
+    .hackathon .p3 {
+        top: 50%;
+        padding: 10px;
+        font-size: 42px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+
+    .footer {
+        padding-left: 90px;
+    }
+
+    .footer p1, .footer p2, .footer p3, .footer p4 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 830px) and (min-width: 769px){
+    .hero .p1, .hero .p2, .hero .p3{
+        margin-left: -30px;
+    }
+    .hero .p1 {
+        top: 40%;
+        padding: 22px;
+        font-size: 32px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+
+    .hero .p2 {
+        top: 48%;
+        padding: 22px;
+        font-size: 56px;
+        font-family: 'Orbitron';
+        font-weight: 600;
+    }
+
+    .hero .p3 {
+        top: 85%;
+        padding: 22px;
+        font-size: 20px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+    .highlight-section {
+        margin-top: 80px;
+    }
+    .agenda h1 {
+        margin-left: 25px;
+    }
+
+    .agenda h2 {
+        margin-left: 28px;
+    }
+
+    .agenda-days {
+        gap: 10px;
+        margin-left: 25px;
+    }
+    .agenda-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .card {
+        width: 90%;
+        margin-left: 0;
+    }
+    .hackathon img {
+        width: 100%; 
+        height: 350px; 
+        object-fit: cover; 
+        object-position: center; 
+        max-height: 100%;
+        left: 8%;
+    }
+    .hackathon .p1, .hackathon .p2, .hackathon .p3{
+        margin-left: -30px;
+    }
+    .hackathon .p1 {
+        top: 25%;
+        padding: 10px;
+        font-size: 24px;
+        font-family: titilium;
+        font-weight: 400;
+        line-height: 36.5px;
+    }
+    
+    .hackathon .p2 {
+        top: 23%;
+        padding: 10px;
+        font-size: 64px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+    
+    .hackathon .p3 {
+        top: 50%;
+        padding: 10px;
+        font-size: 42px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+
+    .footer{
+        margin-left: -90px;
+    }
+}
+@media (max-width: 768px) and (min-width: 731px) {
+    .header nav {
+        position: absolute;
+        justify-content: space-between;
+        top: 8.3vh;
+        width: 50%;
+        right: -60px;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        gap: 20px;
+        align-items: center;
+
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    .hero .p1 {
+        top: 45%;
+        padding: 22px;
+        font-size: 32px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+
+    .hero .p2 {
+        top: 50%;
+        padding: 22px;
+        font-size: 56px;
+        font-family: 'Orbitron';
+        font-weight: 600;
+    }
+
+    .hero .p3 {
+        top: 88%;
+        padding: 22px;
+        font-size: 20px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+    .highlight-section {
+        margin-top: 90px;
+    }
+    .highlight-section p {
+        max-width: 700px;
+    }
+    .agenda h1{
+        margin-left: 23px;
+    }
+    .agenda h2{
+        margin-left: 23px;
+    }
+    .agenda-days{
+        display: none;
+        margin-left: -10px;
+    }
+    .agenda-days2 {
+        display: flex;
+        margin-left: 25px;
+    }
+    .agenda-cards {
+        grid-template-columns: repeat(1, 6fr);
+        gap: 15px;
+    }
+    .card {
+        margin-left: 0px;
+       aspect-ratio: 2.5 / 0.7;
+        
+    }
+    .hackathon img {
+        width: 100%; 
+        height: 400px; 
+        object-fit: cover; 
+        object-position: center; 
+        max-height: 100%;
+        left: 8%;
+    }
+    .hackathon .p1 {
+        top: 27%;
+        padding: 10px;
+        font-size: 24px;
+        font-family: titilium;
+        font-weight: 400;
+        line-height: 36.5px;
+    }
+    
+    .hackathon .p2 {
+        top: 25%;
+        padding: 10px;
+        font-size: 64px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+    
+    .hackathon .p3 {
+        top: 50%;
+        padding: 10px;
+        font-size: 42px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+    .footer {
+        padding-left: 80px;
+    }
+}
+@media (max-width: 730px) and (min-width: 601px) {
+    .header nav {
+        position: absolute;
+        justify-content: space-between;
+        top: 8.3vh;
+        width: 50%;
+        right: -60px;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        gap: 20px;
+        align-items: center;
+
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    .hero .p1 {
+        top: 34%;
+        padding: 22px;
+        font-size: 32px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+
+    .hero .p2 {
+        top: 40%;
+        padding: 22px;
+        font-size: 56px;
+        font-family: 'Orbitron';
+        font-weight: 600;
+    }
+
+    .hero .p3 {
+        top: 95%;
+        padding: 22px;
+        font-size: 20px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+    .highlight-section {
+        margin-top: 130px;
+    }
+    .highlight-section p {
+        max-width: 700px;
+    }
+    .agenda h1{
+        margin-left: 23px;
+    }
+    .agenda h2{
+        margin-left: 23px;
+    }
+    .agenda-days{
+        display: none;
+        margin-left: -10px;
+    }
+    .agenda-days2 {
+        display: flex;
+        margin-left: 25px;
+    }
+    .agenda-cards {
+        grid-template-columns: repeat(1, 6fr);
+        gap: 15px;
+    }
+    .card {
+        margin-left: 0px;
+       aspect-ratio: 2.5 / 0.7;
+        
+    }
+    .hackathon img {
+        width: 100%; 
+        height: 380px; 
+        object-fit: cover; 
+        object-position: center; 
+        max-height: 100%;
+        left: 8%;
+    }
+    .hackathon .p1 {
+        top: 27%;
+        padding: 10px;
+        font-size: 24px;
+        font-family: titilium;
+        font-weight: 400;
+        line-height: 36.5px;
+    }
+    
+    .hackathon .p2 {
+        top: 25%;
+        padding: 10px;
+        font-size: 64px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+    
+    .hackathon .p3 {
+        top: 50%;
+        padding: 10px;
+        font-size: 42px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+    .footer {
+        padding-left: 80px;
+    }
+
+}
+
+/* Responsive Design */
+@media (max-width: 600px) and (min-width: 552px) {
+    .header nav {
+        position: absolute;
+        justify-content: space-between;
+        top: 8.3vh;
+        width: 50%;
+        right: -60px;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        gap: 20px;
+        align-items: center;
+
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    .hero h1, .hero h2, .hero h3{
+        margin-left: -65px;
+        width: 95%;
+    }
+
+    .hero .p1 {
+        top: 45%;
+        padding: 22px;
+        font-size: 32px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+
+    .hero .p2 {
+        top: 50%;
+        padding: 22px;
+        font-size: 56px;
+        font-family: 'Orbitron';
+        font-weight: 600;
+    }
+
+    .hero .p3 {
+        top: 112%;
+        padding: 22px;
+        font-size: 20px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+
+    .highlight-section {
+        margin-top: 140px;
+    }
+
+    .highlight-section h1{
+        margin-left: -12px;
+        width: 568px;
+        font-size: 44px;
+    }
+    .highlight-section p{
+        margin-left: -15px;
+        width: 568px;
+    }
+
+    .agenda h1{
+        margin-left: -10px;
+    }
+    .agenda h2{
+        margin-left: -10px;
+    }
+    .agenda-days{
+        display: none;
+        margin-left: -10px;       
+    }
+    .agenda-days2 {
+        display: flex;
+    }
+
+    .agenda-cards {
+        grid-template-columns: repeat(1, 6fr);
+        gap: 15px;  
+    }
+
+    .card{
+       margin-left: -28px;
+       aspect-ratio: 1.87 / 0.7;
+    }
+    .card h2{
+        margin-left: 12px;
+    }
+
+    .hackathon .p1, .hackathon .p2, .hackathon .p3 {
+        width: 90%;      
+    }
+
+    .hackathon img {
+        width: 100%; 
+        height: 445px; 
+        object-fit: cover; 
+        object-position: center; 
+        max-height: 100%;
+        left: 8%;
+    }
+
+    .hackathon .p1{
+        top: 34%;
+        padding: 10px;
+        padding-left: 40px;
+    }
+    .hackathon .p2{
+        top: 34%;
+        padding: 10px;
+        padding-left: 40px;
+    }
+    .hackathon .p3{
+        top: 58%;
+        padding: 10px;
+        padding-left: 40px;
+    }
+
+    .footer {
+        padding-left: 18px;
+        width: 90%;       
+    }
+
+    .footer p1, .footer p2, .footer p3, .footer p4 {
+        font-size: 16px;
+    }
+    
+}
+@media (max-width: 551px) and (min-width: 426px){
+    .header nav {
+        position: absolute;
+        justify-content: space-between;
+        top: 8.3vh;
+        width: 50%;
+        right: -40px;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        gap: 20px;
+        align-items: center;
+
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    .hero h1, .hero h2, .hero h3{
+        margin-left: -65px;
+        width: 95%;
+    }
+
+    .hero .p1 {
+        top: 28%;
+        padding: 22px;
+        font-size: 32px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+
+    .hero .p2 {
+        top: 40%;
+        padding: 22px;
+        font-size: 56px;
+        font-family: 'Orbitron';
+        font-weight: 600;
+    }
+
+    .hero .p3 {
+        top: 112%;
+        padding: 22px;
+        font-size: 20px;
+        font-family: titilium;
+        font-weight: 400;
+    }
+
+    .highlight-section {
+        margin-top: 180px;
+    }
+
+    .highlight-section h1{
+        margin-left: -12px;
+        width: 520px;
+        font-size: 36px;
+    }
+    .highlight-section p{
+        margin-left: -15px;
+        width: 520px;
+    }
+
+    .agenda h1{
+        margin-left: -10px;
+    }
+    .agenda h2{
+        margin-left: -10px;
+    }
+    .agenda-days{
+        display: none;
+        margin-left: -10px;       
+    }
+    .agenda-days2 {
+        display: flex;
+    }
+
+    .agenda-cards {
+        grid-template-columns: repeat(1, 6fr);
+        gap: 15px;  
+    }
+
+    .card{
+       margin-left: -28px;
+       aspect-ratio: 1.72 / 0.7;
+    }
+    .card h2{
+        margin-left: 12px;
+    }
+
+    .hackathon .p1, .hackathon .p2, .hackathon .p3 {
+        width: 90%;      
+    }
+
+    .hackathon img {
+        width: 100%; 
+        height: 445px; 
+        object-fit: cover; 
+        object-position: center; 
+        max-height: 100%;
+        left: 8%;
+    }
+
+    .hackathon .p1{
+        top: 34%;
+        padding: 10px;
+        padding-left: 40px;
+    }
+    .hackathon .p2{
+        top: 34%;
+        padding: 10px;
+        padding-left: 40px;
+    }
+    .hackathon .p3{
+        top: 58%;
+        padding: 10px;
+        padding-left: 40px;
+    }
+
+    .footer {
+        padding-left: 18px;
+        width: 90%;       
+    }
+
+    .footer p1, .footer p2, .footer p3, .footer p4 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 425px) {
+    .header nav {
+        position: absolute;
+        justify-content: space-between;
+        top: 9.5vh;
+        width: 50%;
+        right: -60px;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    .hero .p1 {
+        top: 35%;
+        padding: 22px;
+        font-size: 22px;
+        font-family: titilium;
+        font-weight: 400;
+        margin-left: -25px;
+    }
+
+    .hero .p2 {
+        top: 40%;
+        padding: 22px;
+        font-size: 40px;
+        font-family: 'Orbitron';
+        font-weight: 600;
+        margin-left: -25px;
+    }
+
+    .hero .p3 {
+        top: 100%;
+        padding: 22px;
+        font-size: 16px;
+        font-family: titilium;
+        font-weight: 400;
+        margin-left: -25px;
+    }
+    .highlight-section {
+        margin-top: 90px;
+    }
+    .highlight-section p {
+        max-width: 700px;
+    }
+    .agenda h1{
+        margin-left: 23px;
+        font-size: 30px;
+    }
+    .agenda h2{
+        margin-left: 23px;
+        font-size: 20px;
+    }
+    .agenda-days{
+        display: none;
+    }
+    .agenda-days2 {
+        display: flex;
+        margin-left: 25px;
+    }
+    .agenda-cards {
+        grid-template-columns: repeat(1, 6fr);
+        gap: 15px;
+    }
+    .card {
+        margin-left: 0px;
+        aspect-ratio: 1.3 / 0.9; 
+    }
+    .hackathon img {
+        width: 100%; 
+        height: 400px; 
+        object-fit: cover; 
+        object-position: center; 
+        max-height: 100%;
+        left: 12%;
+    }
+    .hackathon .p1 {
+        top: 30%;
+        padding: 10px;
+        font-size: 18px;
+        font-family: titilium;
+        font-weight: 400;
+        line-height: 36.5px;
+    }
+    
+    .hackathon .p2 {
+        top: 30%;
+        padding: 10px;
+        font-size: 48px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+    
+    .hackathon .p3 {
+        top: 50%;
+        padding: 10px;
+        font-size: 28px;
+        font-family: orbitron;
+        font-weight: 600;
+    }
+    .footer {
+        padding-left: 20px;
+    } 
+}
+.header nav.active {
+    transform: translateX(0);
+}
+
+@keyframes navLinksFade {
+    from {
+        opacity: 0.5;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
